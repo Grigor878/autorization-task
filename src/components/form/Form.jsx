@@ -6,8 +6,8 @@ import "sweetalert2/src/sweetalert2.scss"
 
 const Form = () => {
     const postClintInfo = (e) => {
-        const firstname = e.target.firstname.value;
-        const lastname = e.target.lastname.value;
+        const firstname = e.target.first_name.value;
+        const lastname = e.target.last_name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
 
@@ -19,7 +19,7 @@ const Form = () => {
             'email': email,
             'password': password,
         }
-        
+
         console.log(data);
 
         Swal.fire({
@@ -30,8 +30,8 @@ const Form = () => {
             timer: 1500
         })
 
-        e.target.firstname.value = null
-        e.target.lastname.value = null
+        e.target.first_name.value = null
+        e.target.last_name.value = null
         e.target.email.value = null
         e.target.password.value = null
     }
@@ -46,25 +46,25 @@ const Form = () => {
 
             <input
                 type="text"
-                name="firstname"
+                id="first_name"
                 placeholder="First Name"
                 required={true}
             />
             <input
                 type="text"
-                name="lastname"
+                id="last_name"
                 placeholder="Last Name"
                 required={true}
             />
             <input
                 type="email"
-                name="email"
+                id="email"
                 placeholder="Email"
                 required={true}
             />
             <input
                 type="password"
-                name="password"
+                id="password"
                 placeholder="Password"
                 required={true}
             />
